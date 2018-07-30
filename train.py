@@ -13,6 +13,7 @@ def train(file_path, out_path):
     ts_data = TimeSeriesData(file_path, window=24*7, horizon=24)
 
     ctx = mx.gpu(0)
+    #ctx=mx.gpu()
 
     net = LSTNet(
         num_series=ts_data.num_series,
