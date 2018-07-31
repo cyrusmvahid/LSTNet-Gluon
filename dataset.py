@@ -22,6 +22,7 @@ class TimeSeriesData(object):
         if train_ratio < 1.0:
             self.val = TimeSeriesDataset(data[train_data_len:], window=window, horizon=horizon)
 
+
     def _normalize(self, data):
         """ Normalizes data by maximum value per row (i.e. per time series) and saves the scaling factor
 
